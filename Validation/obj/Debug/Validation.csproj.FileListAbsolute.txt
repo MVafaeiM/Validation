@@ -1,0 +1,15 @@
+E:\C# Project\ValidationV2\Validation\Validation\bin\Debug\Validation.dll
+E:\C# Project\ValidationV2\Validation\Validation\bin\Debug\Validation.pdb
+E:\C# Project\ValidationV2\Validation\Validation\obj\Debug\Validation.csprojResolveAssemblyReference.cache
+E:\C# Project\ValidationV2\Validation\Validation\obj\Debug\Validation.dll
+E:\C# Project\ValidationV2\Validation\Validation\obj\Debug\Validation.pdb
+E:\CSharpProject\ValidationV2\Validation\Validation\bin\Debug\Validation.dll
+E:\CSharpProject\ValidationV2\Validation\Validation\bin\Debug\Validation.pdb
+E:\CSharpProject\ValidationV2\Validation\Validation\obj\Debug\Validation.csprojResolveAssemblyReference.cache
+E:\CSharpProject\ValidationV2\Validation\Validation\obj\Debug\Validation.dll
+E:\CSharpProject\ValidationV2\Validation\Validation\obj\Debug\Validation.pdb
+E:\Vafaei\Tools&Utility\Validation\Validation\Validation\bin\Debug\Validation.dll
+E:\Vafaei\Tools&Utility\Validation\Validation\Validation\bin\Debug\Validation.pdb
+E:\Vafaei\Tools&Utility\Validation\Validation\Validation\obj\Debug\Validation.csprojResolveAssemblyReference.cache
+E:\Vafaei\Tools&Utility\Validation\Validation\Validation\obj\Debug\Validation.dll
+E:\Vafaei\Tools&Utility\Validation\Validation\Validation\obj\Debug\Validation.pdb

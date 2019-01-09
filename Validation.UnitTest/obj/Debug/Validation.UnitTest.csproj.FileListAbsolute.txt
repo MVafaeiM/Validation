@@ -1,0 +1,14 @@
+E:\Vafaei\Tools&Utility\Validation\Validation\Validation.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\Vafaei\Tools&Utility\Validation\Validation\Validation.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\Vafaei\Tools&Utility\Validation\Validation\Validation.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+E:\Vafaei\Tools&Utility\Validation\Validation\Validation.UnitTest\bin\Debug\Validation.UnitTest.dll
+E:\Vafaei\Tools&Utility\Validation\Validation\Validation.UnitTest\bin\Debug\Validation.UnitTest.pdb
+E:\Vafaei\Tools&Utility\Validation\Validation\Validation.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+E:\Vafaei\Tools&Utility\Validation\Validation\Validation.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+E:\Vafaei\Tools&Utility\Validation\Validation\Validation.UnitTest\bin\Debug\Validation.dll
+E:\Vafaei\Tools&Utility\Validation\Validation\Validation.UnitTest\bin\Debug\Validation.pdb
+E:\Vafaei\Tools&Utility\Validation\Validation\Validation.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+E:\Vafaei\Tools&Utility\Validation\Validation\Validation.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+E:\Vafaei\Tools&Utility\Validation\Validation\Validation.UnitTest\obj\Debug\Validation.UnitTest.csprojResolveAssemblyReference.cache
+E:\Vafaei\Tools&Utility\Validation\Validation\Validation.UnitTest\obj\Debug\Validation.UnitTest.dll
+E:\Vafaei\Tools&Utility\Validation\Validation\Validation.UnitTest\obj\Debug\Validation.UnitTest.pdb

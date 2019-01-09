@@ -1,0 +1,16 @@
+﻿
+Base Version :  
+Remove Method {
+CheckLetterSymbol()
+CheckEmptyArraye(this string[] arr)
+CheckEmptyArraye(this double[] arr)
+CheckEmptyArraye(this long[] arr)
+CheckEmptyArraye(this int[] arr)
+CheckLenght(this string input, int lenght)
+CheckLenght(this int input, int lenght)
+CheckLenght(this long input, int lenght)
+
+
+}
+
+
