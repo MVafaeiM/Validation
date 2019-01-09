@@ -105,12 +105,12 @@ namespace Validation
                 if (input.CheckNumeric() == false) return false;
                 if (mobileOptional == MobileOptional.WithZero)
                 {
-                    if (input.StartsWith("0") == false || input.Length == 11)
+                    if (input.StartsWith("0") == false || input.Length != 11)
                         return false;
                 }
                 if (mobileOptional == MobileOptional.WithOutZero)
                 {
-                    if (input.StartsWith("0") || input.Length == 10)
+                    if (input.StartsWith("0") || input.Length != 10)
                         return false;
                 }
                 if (mobileOptional == MobileOptional.Both)
@@ -120,8 +120,6 @@ namespace Validation
                 }
                 return true;
             }
-
-
 
         }
     }

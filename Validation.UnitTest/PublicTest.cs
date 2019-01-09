@@ -124,10 +124,12 @@ namespace Validation.UnitTest
             foreach (var item in values)
             {
                 //Actual 
-                var act = item.Value.CheckNationalCode();
+                var act = item.Value.CheckMobile(MobileOptional.WithZero);
                 //Expected
                 Assert.AreEqual(act, item.Expected);
             }
         }
+
+
     }
 }

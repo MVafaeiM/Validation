@@ -9,8 +9,6 @@ CheckEmptyArraye(this int[] arr)
 CheckLenght(this string input, int lenght)
 CheckLenght(this int input, int lenght)
 CheckLenght(this long input, int lenght)
-
-
 }
 
 
