@@ -1,0 +1,9 @@
+E:\Vafaei\Tools&Utility\Validation\ExampleUse\ExampleUse\bin\Debug\ExampleUse.exe.config
+E:\Vafaei\Tools&Utility\Validation\ExampleUse\ExampleUse\bin\Debug\ExampleUse.exe
+E:\Vafaei\Tools&Utility\Validation\ExampleUse\ExampleUse\bin\Debug\ExampleUse.pdb
+E:\Vafaei\Tools&Utility\Validation\ExampleUse\ExampleUse\obj\Debug\ExampleUse.FrmMain.resources
+E:\Vafaei\Tools&Utility\Validation\ExampleUse\ExampleUse\obj\Debug\ExampleUse.Properties.Resources.resources
+E:\Vafaei\Tools&Utility\Validation\ExampleUse\ExampleUse\obj\Debug\ExampleUse.csproj.GenerateResource.Cache
+E:\Vafaei\Tools&Utility\Validation\ExampleUse\ExampleUse\obj\Debug\ExampleUse.exe
+E:\Vafaei\Tools&Utility\Validation\ExampleUse\ExampleUse\obj\Debug\ExampleUse.pdb
+E:\Vafaei\Tools&Utility\Validation\ExampleUse\ExampleUse\obj\Debug\ExampleUse.csprojResolveAssemblyReference.cache

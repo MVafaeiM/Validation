@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
+using Validation.Public;
 
 namespace Validation
 {
@@ -15,65 +16,51 @@ namespace Validation
             {
                 Jpg, Jpeg, Png, Tiff, Bmp, Rar, Zip, Mp3, Docx, Xml, Xlsx, Mdb, Accdb, Exe, Bat, Dll, Html, Css, Js, Php, Wave, Json, Java
             }
-            public enum Software
-            {
-                Chrome, Iexplore, Devenv, Explorer, Egui, Calculator
-            }
             public static bool CheckExtention(this string path, Extension ex)
             {
-                string input = System.IO.Path.GetExtension(path);
-                if (input != null && input.Contains(ex.ToString()))
+                string input = Path.GetExtension(path);
+                if (input != null && input.Contains(ex.ToString().ToLower()))
                 {
                     return true;
                 }
                 return false;
-            }
-            public static bool CheckExistsDirectory(this string path)
-            {
-                return Directory.Exists(path);
-            }
-            public static bool CheckExistsFile(this string path)
-            {
-                return File.Exists(path);
             }
             public static bool CheckAttributeFile(this string path, FileAttributes fileAttribute)
             {
-                FileInfo f = new FileInfo(path);
-                if (f.Attributes == fileAttribute)
+                if (path.CheckEmpty()) return false;
+
+                try
                 {
-                    return true;
-                }
-                return false;
-            }
-            public static bool CheckLenghtFile(this string path, long lenghtKb)
-            {
-                FileInfo f = new FileInfo(path);
-                if ((f.Length / 1024) < lenghtKb)
-                {
-                    return true;
-                }
-                return false;
-            }
-            public static bool CheckExistDrive(this String driveName)
-            {
-                foreach (DriveInfo item in DriveInfo.GetDrives())
-                {
-                    if (item.Name == driveName && item.IsReady)
+                    FileInfo f = new FileInfo(path);
+                    if (f.Attributes == fileAttribute)
                     {
                         return true;
                     }
-                    else
-                        return false;
+                }
+                catch (Exception)
+                {
+                    return false;
                 }
                 return false;
             }
-            public static bool CheckRunnigSoftware(Software s)
+            public static bool CheckExistDrive(this string driveName)
             {
-                if (Process.GetProcessesByName(s.ToString()).Length > 0)
+                if (driveName.CheckEmpty()) return false;
+                try
                 {
-                    return true;
+                    foreach (DriveInfo item in DriveInfo.GetDrives())
+                    {
+                        if (item.Name.ToLower() == driveName.ToLower() && item.IsReady)
+                        {
+                            return true;
+                        }
+                    }
+                    return false;
                 }
-                return false;
+                catch (Exception)
+                {
+                    return false;
+                }
             }
             public static bool CheckUsbConnect()
             {
