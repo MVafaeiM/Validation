@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.Eventing.Reader;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -14,7 +16,7 @@ namespace Validation
         {
             public enum Extension
             {
-                Jpg, Jpeg, Png, Tiff, Bmp, Rar, Zip, Mp3, Docx, Xml, Xlsx, Mdb, Accdb, Exe, Bat, Dll, Html, Css, Js, Php, Wave, Json, Java
+                Jpg, Jpeg, Png, Tiff, Bmp, Rar, Zip, Mp3, Docx, Xml, Xlsx, Mdb, Accdb, Exe, Bat, Dll, Html, Css, Js, Php, Wave, Json, Java, Less
             }
             public static bool CheckExtention(this string path, Extension ex)
             {
@@ -74,24 +76,25 @@ namespace Validation
                 }
                 return false;
             }
-            public static bool CheckRunningInstance(this Process currentProccess, string addressExeFile)
+            public static bool CheckInstalledFont(this string fontName)
             {
-                Process[] processes = Process.GetProcessesByName(currentProccess.ProcessName);
+                if (fontName.CheckEmpty()) return false;
+                float fontSize = 12;
 
-                foreach (Process process in processes)
+                using (Font fontTester = new Font(
+                    fontName,
+                    fontSize,
+                    FontStyle.Regular,
+                    GraphicsUnit.Pixel))
                 {
-                    if (process.Id != currentProccess.Id)
+                    if (fontTester.Name.ToLower() == fontName.ToLower())
                     {
-                        if (addressExeFile.
-                                Replace("/", "\\") == currentProccess.MainModule.FileName)
-                        {
-                            return true;
-
-                        }
+                        return true;
                     }
+                    return false;
                 }
-                return false;
             }
+
 
         }
 

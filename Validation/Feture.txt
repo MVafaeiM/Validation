@@ -17,4 +17,16 @@ CheckLenght(this long input, int lenght)
 
  WithExample :
 
+ RemoveMethod {
+ 
+  CheckRunningSoftware 
+  CheckExistDir 
+  CheckExistFile
+
+ }
+
+ With WindowValidation : 
+
+ New Method : 
+ CheckInstalledFont 
 

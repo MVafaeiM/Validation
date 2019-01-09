@@ -1,7 +1,10 @@
-﻿using Validation.Windows;
+﻿using System;
+using Validation.Windows;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.IO;
+using System.Net.Mime;
 
 namespace Validation.UnitTest
 {
@@ -17,23 +20,23 @@ namespace Validation.UnitTest
         {
             public string Value { set; get; }
             public bool Expected { set; get; }
-            public WindowsValidation.Extension ex { set; get; }
+            public WindowsValidation.Extension Ex { set; get; }
         }
         class ValuesAttribute
         {
             public string Value { set; get; }
             public bool Expected { set; get; }
-            public FileAttributes attr { set; get; }
+            public FileAttributes Attr { set; get; }
         }
         [TestMethod()]
         public void CheckExtentionTest()
         {
             List<ValuesExtention> values = new List<ValuesExtention>
             {
-                new ValuesExtention(){Value = "",Expected = false,ex = WindowsValidation.Extension.Html} ,
-                new ValuesExtention(){Value = "C:\\file.html",Expected = true,ex=WindowsValidation.Extension.Html} ,
-                new ValuesExtention(){Value = "C:\\file.html.",Expected = false,ex=WindowsValidation.Extension.Html},
-                new ValuesExtention(){Value = null,Expected = false,ex=WindowsValidation.Extension.Html}
+                new ValuesExtention(){Value = "",Expected = false,Ex = WindowsValidation.Extension.Html} ,
+                new ValuesExtention(){Value = "C:\\file.html",Expected = true,Ex=WindowsValidation.Extension.Html} ,
+                new ValuesExtention(){Value = "C:\\file.html.",Expected = false,Ex=WindowsValidation.Extension.Html},
+                new ValuesExtention(){Value = null,Expected = false,Ex=WindowsValidation.Extension.Html}
 
             };
             //Arange 
@@ -51,14 +54,14 @@ namespace Validation.UnitTest
         {
             List<ValuesAttribute> values = new List<ValuesAttribute>
             {
-                new ValuesAttribute(){Value = @"c:\test.wav",Expected = true,attr = FileAttributes.Archive} ,
+                new ValuesAttribute(){Value = @"c:\test.wav",Expected = true,Attr = FileAttributes.Archive} ,
 
             };
             //Arange 
             foreach (var item in values)
             {
                 //Actual 
-                var act = item.Value.CheckAttributeFile(item.attr);
+                var act = item.Value.CheckAttributeFile(item.Attr);
                 //Expected
                 Assert.AreEqual(act, item.Expected);
             }
@@ -88,6 +91,26 @@ namespace Validation.UnitTest
         public void CheckUsbConnectTest()
         {
             Assert.AreEqual(WindowsValidation.CheckUsbConnect(), false);
+        }
+
+        [TestMethod()]
+        public void CheckInstalledFontTest()
+        {
+            List<Values> values = new List<Values>
+            {
+                new Values(){Value = "tahoma",Expected = true} ,
+                new Values(){Value = "arial",Expected = true} ,
+                new Values(){Value = "B Lotus",Expected = true} ,
+                new Values(){Value = "B test",Expected = false} ,
+            };
+            //Arange 
+            foreach (var item in values)
+            {
+                //Actual 
+                var act = item.Value.CheckInstalledFont();
+                //Expected
+                Assert.AreEqual(act, item.Expected);
+            }
         }
     }
 }
