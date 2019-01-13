@@ -3,7 +3,6 @@ Base Version :
 Initials Project
 
 PublicValidationWithUnitTest :
-
 Remove Method {
 CheckLetterSymbol()
 CheckEmptyArraye(this string[] arr)
@@ -16,17 +15,17 @@ CheckLenght(this long input, int lenght)
 }
 
  WithExample :
-
  RemoveMethod {
- 
   CheckRunningSoftware 
   CheckExistDir 
   CheckExistFile
-
  }
 
  With WindowValidation : 
-
  New Method : 
  CheckInstalledFont 
 
+ WithNetwork Validation  :
+ Change Check Ip Version 4
+ Change Check Internet Connection 
+ Remove Method  public static bool CheckUrlValid(this string source)
