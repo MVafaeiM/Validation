@@ -121,6 +121,7 @@ namespace Validation.UnitTest
         [TestMethod()]
         public void CheckValidUrlTest()
         {
+            //Arange 
             List<Values> values = new List<Values>
             {
                 new Values() {Value = "http://google.com", Expected = true},
@@ -129,8 +130,7 @@ namespace Validation.UnitTest
                 new Values() {Value = "test", Expected = false},
                 new Values() {Value = "https://google.com", Expected = true},
             };
-            //Arange 
-
+            
             foreach (var item in values)
             {
                 //Actual 

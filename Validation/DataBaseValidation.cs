@@ -28,21 +28,7 @@ namespace Validation
                 return false;
 
             }
-            public static bool CheckAvalibleServiceSqlBrowserSqlServer()
-            {
-                ServiceController[] services = ServiceController.GetServices();
-                foreach (ServiceController service in services)
-                {
-                    if (service.ServiceName.Contains("SQLBrowser"))
-                    {
-                        if (service.Status == ServiceControllerStatus.Running)
-                            return true;
 
-                        return false;
-                    }
-                }
-                return false;
-            }
             public static bool CheckAvalibleServiceSqlWriterSqlServer()
             {
                 ServiceController[] services = ServiceController.GetServices();
@@ -52,8 +38,7 @@ namespace Validation
                     {
                         if (service.Status == ServiceControllerStatus.Running)
                             return true;
-                        else
-                            return false;
+                        return false;
                     }
                 }
                 return false;
@@ -86,16 +71,18 @@ namespace Validation
             {
                 SqlDataAdapter adp = new SqlDataAdapter();
                 DataTable dt = new DataTable();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = con;
-                cmd.CommandText = "select * from " + tblName + "";
+                SqlCommand cmd = new SqlCommand
+                {
+                    Connection = con,
+                    CommandText = "select * from " + tblName + ""
+                };
                 adp.SelectCommand = cmd;
                 adp.Fill(dt);
                 if (dt.Rows.Count > 0)
                 {
                     return false;
                 }
-                    return true;
+                return true;
             }
             public static bool CheckServerConnectedSql(this string connectionString)
             {

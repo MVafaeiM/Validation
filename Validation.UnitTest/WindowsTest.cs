@@ -75,7 +75,7 @@ namespace Validation.UnitTest
                 new Values(){Value = @"d:\",Expected = true} ,
                 new Values(){Value = "d:\\",Expected = true} ,
                 new Values(){Value = "w:",Expected = false} ,
-
+                new Values(){Value = null,Expected = false} ,
             };
             //Arange 
             foreach (var item in values)
@@ -102,6 +102,7 @@ namespace Validation.UnitTest
                 new Values(){Value = "arial",Expected = true} ,
                 new Values(){Value = "B Lotus",Expected = true} ,
                 new Values(){Value = "B test",Expected = false} ,
+                new Values(){Value = "B Yekan",Expected = true} ,
             };
             //Arange 
             foreach (var item in values)
