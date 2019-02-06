@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Validation.UnitTest
 {
     [TestClass]
-    public class NetwordTest
+    public class NetworkTest
     {
         class Values
         {

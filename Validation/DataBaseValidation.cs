@@ -14,34 +14,48 @@ namespace Validation
         {
             public static bool CheckAvalibleServiceAgentSqlServer()
             {
-                ServiceController[] services = ServiceController.GetServices();
-                foreach (ServiceController service in services)
+                try
                 {
-                    if (service.ServiceName.Contains("SQLSERVERAGENT"))
+                    ServiceController[] services = ServiceController.GetServices();
+                    foreach (ServiceController service in services)
                     {
-                        if (service.Status == ServiceControllerStatus.Running)
-                            return true;
-                        else
+                        if (service.ServiceName.Contains("SQLSERVERAGENT"))
+                        {
+                            if (service.Status == ServiceControllerStatus.Running)
+                                return true;
                             return false;
+                        }
                     }
+                    return false;
                 }
-                return false;
+                catch
+                {
+                    return false;
+                }
 
             }
 
             public static bool CheckAvalibleServiceSqlWriterSqlServer()
             {
-                ServiceController[] services = ServiceController.GetServices();
-                foreach (ServiceController service in services)
+                try
                 {
-                    if (service.ServiceName.Contains("SQLWriter"))
+                    ServiceController[] services = ServiceController.GetServices();
+                    foreach (ServiceController service in services)
                     {
-                        if (service.Status == ServiceControllerStatus.Running)
-                            return true;
-                        return false;
+                        if (service.ServiceName.Contains("SQLWriter"))
+                        {
+                            if (service.Status == ServiceControllerStatus.Running)
+                                return true;
+                            return false;
+                        }
                     }
+
+                    return false;
                 }
-                return false;
+                catch (Exception)
+                {
+                    return false;
+                }
             }
             public static bool CheckExistsTable(this SqlConnection con, string tblName)
             {
@@ -63,45 +77,26 @@ namespace Validation
                 else
                     return false;
             }
-            public static bool CheckStateConnection(this SqlConnection con, ConnectionState constate)
-            {
-                return con.State == constate;
-            }
             public static bool CheckEmptyTable(this SqlConnection con, string tblName)
             {
-                SqlDataAdapter adp = new SqlDataAdapter();
-                DataTable dt = new DataTable();
                 SqlCommand cmd = new SqlCommand
                 {
                     Connection = con,
-                    CommandText = "select * from " + tblName + ""
+                    CommandText = "select count(*) from " + tblName + ""
                 };
-                adp.SelectCommand = cmd;
-                adp.Fill(dt);
-                if (dt.Rows.Count > 0)
-                {
-                    return false;
-                }
-                return true;
-            }
-            public static bool CheckServerConnectedSql(this string connectionString)
-            {
-                if (string.IsNullOrEmpty(connectionString)) { return false; }
-                using (var lOConnection = new SqlConnection(connectionString))
-                {
-                    try
-                    {
-                        lOConnection.Open();
-                        lOConnection.Close();
-                        return true;
-                    }
-                    catch (SqlException)
-                    {
-                        return false;
-                    }
-                }
-            }
+                if (con.State != ConnectionState.Open) con.Open();
 
+                int cnt =(int)cmd.ExecuteScalar();
+
+                if (con.State != ConnectionState.Closed) con.Close();
+                if (cnt > 0)
+                {
+                    return false; 
+                }
+
+                return true; 
+
+            }
         }
 
     }

@@ -31,6 +31,7 @@ namespace Validation.UnitTest
         [TestMethod()]
         public void CheckExtentionTest()
         {
+            //Arange 
             List<ValuesExtention> values = new List<ValuesExtention>
             {
                 new ValuesExtention(){Value = "",Expected = false,Ex = WindowsValidation.Extension.Html} ,
@@ -39,7 +40,6 @@ namespace Validation.UnitTest
                 new ValuesExtention(){Value = null,Expected = false,Ex=WindowsValidation.Extension.Html}
 
             };
-            //Arange 
             foreach (var item in values)
             {
                 //Actual 
@@ -52,12 +52,12 @@ namespace Validation.UnitTest
         [TestMethod()]
         public void CheckAttributeFileTest()
         {
+            //Arange 
             List<ValuesAttribute> values = new List<ValuesAttribute>
             {
                 new ValuesAttribute(){Value = @"c:\test.wav",Expected = true,Attr = FileAttributes.Archive} ,
 
             };
-            //Arange 
             foreach (var item in values)
             {
                 //Actual 
@@ -70,6 +70,7 @@ namespace Validation.UnitTest
         [TestMethod()]
         public void CheckExistDriveTest()
         {
+            //Arange 
             List<Values> values = new List<Values>
             {
                 new Values(){Value = @"d:\",Expected = true} ,
@@ -77,7 +78,6 @@ namespace Validation.UnitTest
                 new Values(){Value = "w:",Expected = false} ,
                 new Values(){Value = null,Expected = false} ,
             };
-            //Arange 
             foreach (var item in values)
             {
                 //Actual 
@@ -96,6 +96,7 @@ namespace Validation.UnitTest
         [TestMethod()]
         public void CheckInstalledFontTest()
         {
+            //Arange 
             List<Values> values = new List<Values>
             {
                 new Values(){Value = "tahoma",Expected = true} ,
@@ -103,8 +104,9 @@ namespace Validation.UnitTest
                 new Values(){Value = "B Lotus",Expected = true} ,
                 new Values(){Value = "B test",Expected = false} ,
                 new Values(){Value = "B Yekan",Expected = true} ,
+                new Values(){Value = "b Yekan",Expected = true} ,
+                new Values(){Value = "faradars",Expected = true} ,
             };
-            //Arange 
             foreach (var item in values)
             {
                 //Actual 

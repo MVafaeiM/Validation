@@ -20,6 +20,7 @@ namespace Validation.UnitTest
         [TestMethod]
         public void CheckEmptyTest()
         {
+            //Arange 
             List<Values> values = new List<Values>
             {
                 new Values(){Value = "test",Expected = false} ,
@@ -28,7 +29,6 @@ namespace Validation.UnitTest
                 new Values(){Value = "    ",Expected = true},
                 new Values(){Value =string.Empty ,Expected = true}
             };
-            //Arange 
 
             foreach (var item in values)
             {
@@ -42,6 +42,8 @@ namespace Validation.UnitTest
         [TestMethod()]
         public void CheckNumericTest()
         {
+
+            //Arange 
             List<Values> values = new List<Values>
             {
                 new Values(){Value = "09363286141",Expected = true} ,
@@ -50,7 +52,7 @@ namespace Validation.UnitTest
                 new Values(){Value = "",Expected = false},
                 new Values(){Value ="123" ,Expected = true}
             };
-            //Arange 
+            
 
             foreach (var item in values)
             {
@@ -64,6 +66,7 @@ namespace Validation.UnitTest
         [TestMethod()]
         public void CheckLetterTest()
         {
+            //Arange 
             List<Values> values = new List<Values>
             {
                 new Values(){Value = "123",Expected = false} ,
@@ -72,7 +75,6 @@ namespace Validation.UnitTest
                 new Values(){Value = "",Expected = false},
                 new Values(){Value ="abs" ,Expected = true}
             };
-            //Arange 
 
             foreach (var item in values)
             {
