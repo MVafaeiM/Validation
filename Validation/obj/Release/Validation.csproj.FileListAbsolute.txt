@@ -1,0 +1,5 @@
+E:\Vafaei\Tools&Utility\Validation\Validation\bin\Release\Validation.dll
+E:\Vafaei\Tools&Utility\Validation\Validation\bin\Release\Validation.pdb
+E:\Vafaei\Tools&Utility\Validation\Validation\obj\Release\Validation.csprojResolveAssemblyReference.cache
+E:\Vafaei\Tools&Utility\Validation\Validation\obj\Release\Validation.dll
+E:\Vafaei\Tools&Utility\Validation\Validation\obj\Release\Validation.pdb

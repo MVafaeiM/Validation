@@ -34,7 +34,6 @@ namespace Validation
                 }
 
             }
-
             public static bool CheckAvalibleServiceSqlWriterSqlServer()
             {
                 try

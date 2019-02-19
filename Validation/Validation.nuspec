@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>MVafaeiM.Validation</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>https://github.com/MVafaeiM/Validation</licenseUrl>
+    <projectUrl>https://github.com/MVafaeiM/Validation</projectUrl>
+    <iconUrl>http://s9.picofile.com/file/8352725426/document.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Validation Public , Network , DataBase , IO.</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>Validation.Net</tags>
+  </metadata>
+</package>
