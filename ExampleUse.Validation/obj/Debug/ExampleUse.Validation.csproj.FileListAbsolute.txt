@@ -1,0 +1,13 @@
+E:\Vafaei\Tools&Utility\Validation\ExampleUse.Validation\obj\Debug\ExampleUse.Validation.csprojResolveAssemblyReference.cache
+E:\Vafaei\Tools&Utility\Validation\ExampleUse.Validation\obj\Debug\ExampleUse.Validation.FrmMain.resources
+E:\Vafaei\Tools&Utility\Validation\ExampleUse.Validation\obj\Debug\ExampleUse.Validation.Properties.Resources.resources
+E:\Vafaei\Tools&Utility\Validation\ExampleUse.Validation\obj\Debug\ExampleUse.Validation.csproj.GenerateResource.Cache
+E:\Vafaei\Tools&Utility\Validation\ExampleUse.Validation\bin\Debug\ExampleUse.Validation.exe.config
+E:\Vafaei\Tools&Utility\Validation\ExampleUse.Validation\bin\Debug\ExampleUse.Validation.exe
+E:\Vafaei\Tools&Utility\Validation\ExampleUse.Validation\bin\Debug\ExampleUse.Validation.pdb
+E:\Vafaei\Tools&Utility\Validation\ExampleUse.Validation\bin\Debug\DevComponents.DotNetBar2.dll
+E:\Vafaei\Tools&Utility\Validation\ExampleUse.Validation\bin\Debug\Validation.dll
+E:\Vafaei\Tools&Utility\Validation\ExampleUse.Validation\bin\Debug\DevComponents.DotNetBar2.xml
+E:\Vafaei\Tools&Utility\Validation\ExampleUse.Validation\bin\Debug\Validation.pdb
+E:\Vafaei\Tools&Utility\Validation\ExampleUse.Validation\obj\Debug\ExampleUse.Validation.exe
+E:\Vafaei\Tools&Utility\Validation\ExampleUse.Validation\obj\Debug\ExampleUse.Validation.pdb
